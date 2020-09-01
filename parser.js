@@ -1,11 +1,8 @@
 // Amazon Price Tracker learned from https://www.youtube.com/watch?v=H5ObmDUjKV4
 // example url for test "https://www.amazon.co.uk/WD-Elements-Portable-External-Drive/dp/B06VVS7S94"
 // we want to know if the price has dropped below £30 so we supply it 30
-// to run just do the following supplying a url and a min price "node parser.js https://www.amazon.co.uk/WD-Elements-Portable-External-Drive/dp/B06VVS7S94" 30"
+// to run just do the following supplying a url and a min price "node parser.js https://www.amazon.co.uk/WD-Elements-Portable-External-Drive/dp/B06VVS7S94 30"
 
-require("dotenv").config();
-const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const nightmare = require("nightmare")();
 const args = process.argv.slice(2);
 const url = args[0];
